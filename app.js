@@ -5,14 +5,15 @@ var path = require('path');
 // var logger = require('morgan');
 var mysql = require('mysql2');
 var cors = require('cors');
+var cors = require('cors');
 var port = 3000
 
 //Connection Info
 var con = mysql.createConnection({
-  host: process.env.DATABASE_HOST || 'localhost',         // Render will provide DATABASE_HOST
-  user: process.env.DATABASE_USER || 'root',             // Render will provide DATABASE_USER
-  password: process.env.DATABASE_PASSWORD || '',         // Render will provide DATABASE_PASSWORD
-  database: process.env.DATABASE_NAME || 'HMS',          // Render will provide DATABASE_NAME
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'HMS',
   multipleStatements: true
 });
 
