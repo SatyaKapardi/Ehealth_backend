@@ -9,10 +9,10 @@ var port = 3000
 
 //Connection Info
 var con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'HMS',
+  host: process.env.DATABASE_HOST || 'localhost',         // Render will provide DATABASE_HOST
+  user: process.env.DATABASE_USER || 'root',             // Render will provide DATABASE_USER
+  password: process.env.DATABASE_PASSWORD || '',         // Render will provide DATABASE_PASSWORD
+  database: process.env.DATABASE_NAME || 'HMS',          // Render will provide DATABASE_NAME
   multipleStatements: true
 });
 
