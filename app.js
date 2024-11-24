@@ -10,10 +10,10 @@ var port = 3000
 
 //Connection Info
 var con = mysql.createConnection({
-  host: 'localhost',
+  host: 'mysql.railway.internal',
   user: 'root',
-  password: '',
-  database: 'HMS',
+  password: 'XMjBdzmfRJnUwwZlzayxPxGldUlFgQPR',
+  database: 'railway',
   multipleStatements: true
 });
 
